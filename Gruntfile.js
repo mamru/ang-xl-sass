@@ -72,6 +72,7 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
+     
           '<%= yeoman.app %>/**/*.html',
           '.tmp/styles/**/*.css',
           '{.tmp,<%= yeoman.app %>}/scripts/**/*.js',
@@ -86,8 +87,9 @@ module.exports = function (grunt) {
     connect: {
       options: {
         port: process.env.PORT || 9000,
-        hostname: process.env.IP || 'localhost',
-        livereload: 35729
+          
+        hostname: '0.0.0.0',
+		livereload: 4000 
       },
       livereload: {
         options: {
